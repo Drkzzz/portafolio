@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import doge from '../../../public/doge.png'
 import code from '../../../public/code.png'
+import estudio from '../../../public/estudio.png'
+import yo from '../../../public/Yo.png'
 
 export default function Home() {
     return (
@@ -11,7 +13,7 @@ export default function Home() {
                 <h2 className='py-2 text-5xl text-teal-600 font-semibold'>Joaquín Escobar Figueredo</h2>
                 <h3 className=' py-2 text-2xl font-medium'>Software Developer</h3>
                 <span className='text-md py-5 leading-8'>
-                    Full-Stack Developer en <Link href="https://hcsba.cl/">HCSBA</Link>
+                    Actualmente Full-Stack Developer en <Link href="https://hcsba.cl/">HCSBA</Link>
                 </span>
                 <div className='flex justify-center mt-5'>
                     <div className='grid'>
@@ -36,78 +38,88 @@ export default function Home() {
                     <AiFillPhone />
                 </Link>
             </div>
-            <div className='my-20 bg-gradient-to-b from-teal-500'>
-                <div className='flex justify-center'>
-                    <Image height={100} width={100} src={doge} alt='Imagen Personal' className='' />
+            <div className='flex justify-center'>
+                <div className='my-10 bg-gradient-to-b from-teal-500 to-cyan-500 rounded-full w-60 h-60 overflow-hidden'>
+                    <div className='flex justify-center'>
+                        <Image width={200} src={yo} alt='Imagen Personal' className='my-5' />
+                    </div>
                 </div>
             </div>
+
             <section>
                 <div>
                     <h3 className='py-1 text-3xl text-center font-bold'>Acerca de mí</h3>
-                    <p className='py-2 text-md leading-8'>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, aliquid perferendis quod, dolor nulla eum reiciendis iure suscipit sunt necessitatibus sapiente dicta est, doloribus inventore. Commodi odit perferendis delectus dolore!
-                    </p>
+                    <span className='py-2 text-md text-center leading-8'>
+                        <p>
+                            Ingeniero Civil Informático de la <Link href='https://www.unab.cl/'><span className='font-semibold text-teal-500'>Universidad Andrés Bello</span></Link> egresado en Enero de 2023 con conocimientos sólidos en
+                            el modelado y desarrollo de sistemas. Proactivo y autodidacta, con excelente capacidad comunicativa y trabajo colaborativo. Siempre preparado para enfretar nuevos desafíos.
+                            Apasionado por la tecnología desde que tengo memoria.
+                        </p>
+                    </span>
                 </div>
 
                 <h3 className='py-1 my-7 text-3xl text-center font-bold'>Servicios que puedo ofrecerte</h3>
-                <div className='md:grid md:grid-cols-2 md:gap-4'>
-                    <div className='md:col-6'>
-                        <div className='p-10 my-10 flex flex-col justify-between h-full text-center  shadow-xl rounded-2xl'>
-                            <div className='flex justify-center'>
-                                <Image height={50} width={50} src={code} alt='Tutorías de Programación' className='dark:bg-white' />
-                            </div>
-                            <div>
-                                <h3 className='pt-8 pb-2 text-lg font-medium'>Desarrollo de Software</h3>
-                                <p className='py-2'>
-                                    Sistemas a medida según necesidades
-                                </p>
-                            </div>
-                            <div>
-                                <h4 className='py-4 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg font-bold'>Lenguajes y Frameworks</h4>
-                                <div className='grid'>
-                                    <div className='col-12'>
-                                        <p className='py-1'>
-                                            <span className='font-bold text-teal-600'>JavaScript</span> <br />
-                                            Next.JS<br />
-                                            <span className='font-bold text-teal-600'>TypeScript</span> <br />
-                                            NestJS<br />
-                                            <span className='font-bold text-teal-600'>Database</span> <br />
-                                            PostgreSQL
-                                        </p>
+
+                <div className='md:grid md:grid-cols-2 md:gap-2'>
+                    <div>
+                        <div className='p-10 my-10 flex flex-col justify-between text-center rounded-2xl hover:shadow-2xl hover:scale-105 transition ease-in-out duration-300'>
+                            <div className='grid grid-rows-3 gap-3'>
+                                <div className='flex justify-center'>
+                                    <Image width={120} src={code} alt='Tutorías de Programación' />
+                                </div>
+                                <div>
+                                    <h3 className='pt-8 pb-2 text-lg font-medium'>Desarrollo de Software</h3>
+                                    <span className='py-2'>
+                                        <p>Sistemas a medida según necesidades</p>
+                                    </span>
+                                </div>
+                                <div>
+                                    <h4 className='py-4 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg font-bold'>Lenguajes y Frameworks</h4>
+                                    <div className='mt-4 grid grid-cols-3 gap-4'>
+                                        <div>
+                                            <span><p className='text-teal-500 font-medium'>JavaScript💻</p>Next.JS</span>
+                                        </div>
+                                        <div>
+                                            <span><p className='text-teal-500 font-medium'>TypeScript💻</p>NestJS</span>
+                                        </div>
+                                        <div>
+                                            <span><p className='text-teal-500 font-medium'>Databases💾</p>PostgreSQL</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className='md:col-6'>
-                        <div className='my-10 p-10 flex flex-col justify-between h-full text-center shadow-xl rounded-2xl'>
-                            <div className='flex justify-center'>
-                                <Image height={50} width={50} src={code} alt='Tutorías de Programación' className='dark:bg-white' />
-                            </div>
-                            <div>
-                                <h3 className='pt-8 pb-2 text-lg font-medium'>Tutorías de programación personalizadas</h3>
-                                <p className='py-2'>
-                                    Te enseño a instalar todo lo necesario según tu necesidad y estar listo para entender la programación
-                                </p>
-                            </div>
-                            <div>
-                                <h4 className='py-4 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg font-bold'>Lenguajes y Herramientas</h4>
-                                <div className='grid'>
-                                    <div className='col-12'>
-                                        <p className='py-1'>
-                                            <span className='font-bold text-teal-600'>C++</span> <br />
-                                            Code::Blocks y Dev-C++<br />
-                                            <span className='font-bold text-teal-600'>Python</span> <br />
-                                            NestJS<br />
-                                            <span className='font-bold text-teal-600'>Python</span> <br />
-                                            NestJS<br />
+                    <div>
+                        <div className='p-10 my-10 flex flex-col justify-between text-center rounded-2xl hover:shadow-2xl hover:scale-105 transition ease-in-out duration-300'>
+                            <div className='grid grid-rows-3 gap-3'>
+                                <div className='flex justify-center'>
+                                    <Image width={120} src={estudio} alt='Tutorías de Programación' />
+                                </div>
+                                <div>
+                                    <h3 className='pt-8 pb-2 text-lg font-medium'>Tutorías de programación</h3>
+                                    <span className='py-2'>
+                                        <p>
+                                            Te ayudo a preparar todo lo necesario y a entender de mejor forma tus asignaturas de programación
                                         </p>
+                                    </span>
+                                </div>
+                                <div>
+                                    <h4 className='py-4 bg-gradient-to-l from-cyan-500 to-teal-500 rounded-lg font-bold'>Lenguajes y Herramientas</h4>
+                                    <div className='mt-4 grid grid-cols-2 gap-4'>
+                                        <div>
+                                            <span><p className='text-teal-500 font-medium'>C++📚</p> Dev-C++ & Code::Blocks </span>
+                                        </div>
+                                        <div>
+                                            <span><p className='text-teal-500 font-medium'>Python📚</p> VSCode y Pycharm</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </section>
         </>
     )

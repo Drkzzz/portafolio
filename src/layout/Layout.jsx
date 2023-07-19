@@ -1,15 +1,44 @@
+'use client'
 import Link from "next/link"
-import { BsFillMoonStarsFill } from 'react-icons/bs'
+import { useState } from 'react';
+import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
 
 export default function Layout({ children }) {
+  const [theme, setTheme] = useState('light');
+
+  const handleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    if (newTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }
   return (
-    <main className='md:px-96 px-10 mx-auto'>
-      <section className="min-h-screen">
+    <main className='md:px-96 px-5'>
+      <section>
         <nav className=" py-10 mb-12 flex justify-between">
-          <h1 className="text-xl font-burtons">DRKZZZ</h1>
+          <Link href="/">
+            <button className="px-1 font-bold hover:scale-110 hover:transition hover:ease-in-out hover:duration-500">
+              DRKZZZ
+            </button>
+          </Link>
           <ul className="flex items-center">
+            <li className="cursor-pointer">
+              {theme === 'light' ? (
+                <BsFillMoonStarsFill onClick={() => handleTheme()} />
+
+              ) : (
+                <BsFillSunFill onClick={() => handleTheme()} />
+              )}
+            </li>
             <li>
-              <Link className="px-4 py-2 ml-8 bg-gradient-to-r from-cyan-500 to-teal-500  rounded-md" href="#">Resume</Link>
+              <Link className="py-2 ml-8" href="/Proyectos">
+                <button className="px-1 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-md hover:scale-110 hover:transition hover:ease-in-out hover:duration-500-">
+                  Proyectos Realizados
+                </button>
+              </Link>
             </li>
           </ul>
         </nav>
