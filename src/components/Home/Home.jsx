@@ -106,7 +106,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className='pb-10'>
+                    <div className='max-sm:py-20'>
                         <div className='md:p-10 md:my-10 flex flex-col justify-between text-center rounded-2xl md:hover:shadow-2xl md:hover:scale-110 md:transition md:ease-in-out md:duration-500'>
                             <div className='grid grid-rows-3 gap-3'>
                                 <div className='flex justify-center'>
