@@ -61,7 +61,7 @@ export default function Home() {
 
                 <h3 className='py-1 my-7 text-3xl text-center font-bold'>Servicios que puedo ofrecerte</h3>
 
-                <div className='2xl:grid 2xl:grid-cols-2 2xl:gap-10 grid grid-rows-2'>
+                <div className='2xl:grid 2xl:grid-cols-2 2xl:gap-10'>
                     <div>
                         <div className='md:p-10 md:my-10 flex flex-col justify-between text-center rounded-2xl md:hover:shadow-2xl md:hover:scale-110 md:transition md:ease-in-out md:duration-500'>
                             <div className='grid grid-rows-3 gap-3'>
@@ -106,7 +106,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className='mb-5'>
+                    <div className='pb-10'>
                         <div className='md:p-10 md:my-10 flex flex-col justify-between text-center rounded-2xl md:hover:shadow-2xl md:hover:scale-110 md:transition md:ease-in-out md:duration-500'>
                             <div className='grid grid-rows-3 gap-3'>
                                 <div className='flex justify-center'>
