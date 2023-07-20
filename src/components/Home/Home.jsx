@@ -5,6 +5,7 @@ import doge from '../../../public/doge.png'
 import code from '../../../public/code.png'
 import estudio from '../../../public/estudio.png'
 import yo from '../../../public/Yo.png'
+import { BiLogoJavascript, BiLogoTypescript, BiLogoPostgresql, BiLogoCPlusPlus, BiLogoPython } from 'react-icons/bi'
 
 export default function Home() {
     return (
@@ -51,7 +52,7 @@ export default function Home() {
                     <h3 className='py-1 text-3xl text-center font-bold'>Acerca de mí</h3>
                     <span className='py-2 text-md text-center leading-8'>
                         <p>
-                            Ingeniero Civil Informático de la <Link href='https://www.unab.cl/'><span className='font-semibold text-teal-500'>Universidad Andrés Bello</span></Link> egresado en Enero de 2023 con conocimientos sólidos en
+                            Ingeniero Civil Informático de la <Link href='https://www.unab.cl/'><span className='font-semibold text-teal-500'>Universidad Andrés Bello</span></Link> con conocimientos sólidos en
                             el modelado y desarrollo de sistemas. Proactivo y autodidacta, con excelente capacidad comunicativa y trabajo colaborativo. Siempre preparado para enfretar nuevos desafíos.
                             Apasionado por la tecnología desde que tengo memoria.
                         </p>
@@ -60,9 +61,9 @@ export default function Home() {
 
                 <h3 className='py-1 my-7 text-3xl text-center font-bold'>Servicios que puedo ofrecerte</h3>
 
-                <div className='md:grid md:grid-cols-2 md:gap-2'>
+                <div className='2xl:grid 2xl:grid-cols-2 2xl:gap-10 grid grid-rows-2'>
                     <div>
-                        <div className='p-10 my-10 flex flex-col justify-between text-center rounded-2xl hover:shadow-2xl hover:scale-105 transition ease-in-out duration-300'>
+                        <div className='md:p-10 md:my-10 flex flex-col justify-between text-center rounded-2xl md:hover:shadow-2xl md:hover:scale-110 md:transition md:ease-in-out md:duration-500'>
                             <div className='grid grid-rows-3 gap-3'>
                                 <div className='flex justify-center'>
                                     <Image width={120} src={code} alt='Tutorías de Programación' />
@@ -77,27 +78,42 @@ export default function Home() {
                                     <h4 className='py-4 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg font-bold'>Lenguajes y Frameworks</h4>
                                     <div className='mt-4 grid grid-cols-3 gap-4'>
                                         <div>
-                                            <span><p className='text-teal-500 font-medium'>JavaScript💻</p>Next.JS</span>
+                                            <span className='text-teal-500 font-medium'>
+                                                <p className='flex justify-center'>
+                                                    JS <BiLogoJavascript size={24} />
+                                                </p>
+                                            </span>
+                                            Next.JS
                                         </div>
                                         <div>
-                                            <span><p className='text-teal-500 font-medium'>TypeScript💻</p>NestJS</span>
+                                            <span className='text-teal-500 font-medium'>
+                                                <p className='flex justify-center'>
+                                                    TS <BiLogoTypescript size={24} />
+                                                </p>
+                                            </span>
+                                            NestJS
                                         </div>
                                         <div>
-                                            <span><p className='text-teal-500 font-medium'>Databases💾</p>PostgreSQL</span>
+                                            <span className='text-teal-500 font-medium'>
+                                                <p className='flex justify-center'>
+                                                    DB <BiLogoPostgresql size={24} />
+                                                </p>
+                                            </span>
+                                            PostgreSQL
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div className='p-10 my-10 flex flex-col justify-between text-center rounded-2xl hover:shadow-2xl hover:scale-105 transition ease-in-out duration-300'>
+                    <div className='mb-5'>
+                        <div className='md:p-10 md:my-10 flex flex-col justify-between text-center rounded-2xl md:hover:shadow-2xl md:hover:scale-110 md:transition md:ease-in-out md:duration-500'>
                             <div className='grid grid-rows-3 gap-3'>
                                 <div className='flex justify-center'>
                                     <Image width={120} src={estudio} alt='Tutorías de Programación' />
                                 </div>
                                 <div>
-                                    <h3 className='pt-8 pb-2 text-lg font-medium'>Tutorías de programación</h3>
+                                    <h3 className='pt-8 pb-2 text-lg font-medium'>Tutorías universitarias de programación</h3>
                                     <span className='py-2'>
                                         <p>
                                             Te ayudo a preparar todo lo necesario y a entender de mejor forma tus asignaturas de programación
@@ -108,10 +124,20 @@ export default function Home() {
                                     <h4 className='py-4 bg-gradient-to-l from-cyan-500 to-teal-500 rounded-lg font-bold'>Lenguajes y Herramientas</h4>
                                     <div className='mt-4 grid grid-cols-2 gap-4'>
                                         <div>
-                                            <span><p className='text-teal-500 font-medium'>C++📚</p> Dev-C++ & Code::Blocks </span>
+                                            <span className='text-teal-500 font-medium'>
+                                                <p className='flex justify-center'>
+                                                    C++ <BiLogoCPlusPlus size={24} />
+                                                </p>
+                                            </span>
+                                            Dev-C++ & Code::Blocks
                                         </div>
                                         <div>
-                                            <span><p className='text-teal-500 font-medium'>Python📚</p> VSCode y Pycharm</span>
+                                            <span className='text-teal-500 font-medium'>
+                                                <p className='flex justify-center'>
+                                                    Python <BiLogoPython size={24} />
+                                                </p>
+                                            </span>
+                                            VSCode y Pycharm
                                         </div>
                                     </div>
                                 </div>
@@ -119,7 +145,6 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-
             </section>
         </>
     )
